@@ -6,7 +6,7 @@ class WelcomeComponent extends Component {
         return <>
             <h1>Welcome!</h1>
             <div className="container">
-                Welcome {this.props.match.params.name}. You can manage your todos <Link to="/listApplicants">here</Link>.
+                Welcome {this.props.match.params.name}. You can manage the list of applicants <Link to="/listApplicants">here</Link>.
             </div>
         </>
     }
