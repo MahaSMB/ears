@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 //import AuthenticationService from './AuthenticationService'
+import {Link} from 'react-router-dom'
 import { useAxiosGet } from '../Hooks/HttpRequests'
+import Applicant from './Applicant'
 import ApplicantCard from './ApplicantCard'
 import Loader from './Loader'
 
@@ -31,9 +33,7 @@ function ListApplicantsComponent(){
         content = 
         applicants.data.map((applicant) => 
             <div key={applicant.id} className="flex-no-shrink w-full md:w-1/4 md:px-3">
-                <ApplicantCard 
-                    applicant={applicant}
-                />
+                <ApplicantCard applicant={applicant}/>
             </div>
         )
     }
@@ -41,8 +41,9 @@ function ListApplicantsComponent(){
     return (
         <div className="container mx-auto">
             <h1 className="font-bold text-2xl mb-3">
-                List of Applicants
+                List of Applicants                
             </h1>
+            
             <div className="md:flex flex-wrap md:-mx-3">
                 { content } 
             </div>

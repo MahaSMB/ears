@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function ApplicantCard(props){
     return (
         <div className="border mb-4 rounded overflow-hidden">
-            <Link to={`/applicants/${props.applicant.id}`}>
+            <Link to={`/applicant/${props.applicant.id}`}>
                 <div 
                     style={{
                         'backgroundImage': `url('${props.applicant.images[0].imageUrl}')`,
@@ -15,7 +15,7 @@ function ApplicantCard(props){
             </Link>
             <div className="p-3">
                 <h3 className="font-bold text-xl mb-3">
-                    <Link to={`/applicants/${props.applicant.id}`}>
+                    <Link to={`/applicant/${props.applicant.id}`}>
                         { props.applicant.name }
                     </Link>    
                 </h3>
@@ -26,7 +26,7 @@ function ApplicantCard(props){
                     { props.applicant.description }
                 </div>
                 <Link 
-                    to={`/applicants/${props.applicant.id}`}
+                    to={`/applicant/${props.applicant.id}`}
                     className="bg-blue-500 text-white p-2 flex justify-center w-full">
                     View 
                 </Link>
