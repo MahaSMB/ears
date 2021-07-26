@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import AuthenticationService from './AuthenticationService'
+import {Link} from 'react-router-dom'
+
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -59,18 +61,29 @@ class LoginComponent extends Component {
         //console.log(this.state)
     }
 
+
     render() {
         return (
-            <div>
+             <div className="auth-wrapper">
                 <h1>Login</h1>
-                <div className="container">
+                <div className="auth-inner">
                     {/*<ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed} />*/}
                     {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Credentials</div>}
-                    {this.state.showSuccessMessage && <div>Login Successful</div>}
+                    {this.state.showSuccessMessage && <div>Login Successfull</div>}
                     {/*<ShowLoginSuccessfulMessage showSuccessMessage={this.state.showSuccessMessage} />*/}
-                    User Name: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                    Password: <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
-                    <button className="btn btn" onClick={this.loginClicked}>Login</button>
+                    <div className="form-group">
+                        <label>User Name:</label>
+                        <br />
+                        <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Password:</label>
+                        <br />
+                        <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/></div>
+                    <button className="btn btn" onClick={this.loginClicked}>Login</button>                   
+                    <p className="forgot-password">
+                        <Link to={'/forgot'}>Forgot password?</Link>
+                    </p>
                 </div>
            </div>
         )

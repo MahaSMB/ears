@@ -13,6 +13,9 @@ class App extends Component {
       <div className="App">
        {/*<Counter />*/}
        <EARS/>
+
+
+
       </div>
     );
   }
