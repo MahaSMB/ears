@@ -11,6 +11,8 @@ import WelcomeComponent from './WelcomeComponent.jsx'
 import LogoutComponent from './LogoutComponent.jsx'
 import ForgotComponent from './ForgotComponent.jsx'
 import RegisterComponent from './RegisterComponent.jsx'
+import ProfileComponent from './ProfileComponent.jsx'
+import Applicant from './Applicant.jsx'
 //import Navbar from './Navbar.jsx'
 
 class EARS extends Component {
@@ -25,9 +27,11 @@ class EARS extends Component {
                         <Route path="/login" component={LoginComponent}/>
                         <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent}/>
                         <AuthenticatedRoute path="/listApplicants" component={ListApplicantsComponent}/>
+                        <AuthenticatedRoute path="/applicant" component={Applicant}/>
                         <AuthenticatedRoute path="/logout" component={LogoutComponent}/>
-                        <Route path="/forgot" component={ForgotComponent}/>
                         <AuthenticatedRoute path='/register' component={RegisterComponent}/>
+                        <AuthenticatedRoute path='/profile' component={ProfileComponent}/>
+                        <Route path="/forgot" component={ForgotComponent}/>
                         <Route component={ErrorComponent}/>
                     </Switch>
                     <FooterComponent />
