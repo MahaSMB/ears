@@ -22,7 +22,7 @@ export default class ForgotComponent extends Component {
                         <label>Email:</label>
                         <input type="email" name="email" onChange={this.handleChange}/>
                     
-                    <button className="btn btn" onClick={this.loginClicked}>Submit</button>
+                    <button className="btn btn-success" onClick={this.loginClicked}>Submit</button>
                     </div>
                 </div>
            </form>

@@ -80,7 +80,7 @@ class LoginComponent extends Component {
                         <label>Password:</label>
                         <br />
                         <input type="password" name="password" value={this.state.password} onChange={this.handleChange}/></div>
-                    <button className="btn btn" onClick={this.loginClicked}>Login</button>                   
+                    <button className="btn btn-success" onClick={this.loginClicked}>Login</button>                   
                     <p className="forgot-password">
                         <Link to={'/forgot'}>Forgot password?</Link>
                     </p>

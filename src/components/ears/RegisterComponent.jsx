@@ -65,7 +65,7 @@ class RegisterComponent extends Component {
                         <br />
                         <input type="password-confirm" name="password-confirm" value={this.state.passwordConfirm} onChange={this.handleChange}/>
                     </div>
-                    <button className="btn btn" onClick={this.registerClicked}>Register</button>
+                    <button className="btn btn-success" onClick={this.registerClicked}>Register</button>
                 </div>
            </div>
         )

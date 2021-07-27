@@ -9,7 +9,7 @@ import Loader from './Loader'
 function ListApplicantsComponent(){
     // Create your own Mock API: https://mockapi.io/
     const url = `https://5e9623dc5b19f10016b5e31f.mockapi.io/api/v1/products?page=1&limit=10`
-    //const url = `https://60fea3bf25741100170786c7.mockapi.io/api/v1/applicants`
+    //const url = `https://60fea3bf25741100170786c7.mockapi.io/api/v1/applicant`
     let applicants = useAxiosGet(url)
 
     let content = null

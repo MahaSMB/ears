@@ -11,6 +11,7 @@ function Dropdown() {
         <NavDropdown title="Home">
             <NavDropdown.Item href="/welcome/:name">Home</NavDropdown.Item>
             <NavDropdown.Item href="/listApplicants">List of Applicants</NavDropdown.Item>
+            <NavDropdown.Item href="/manageUser">Manage User</NavDropdown.Item>
             <NavDropdown.Item href="/register">Create A New Account/Register</NavDropdown.Item>
         </NavDropdown>
     </Nav>

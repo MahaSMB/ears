@@ -107,7 +107,7 @@ render() {
                         <input type="radio" id="department2" name="department" value="ComputerScience"/>
                         <label2 for="department2"> Computer Science</label2>
                 </div>     
-                    <button className="btn btn" onClick={this.submitClicked}>Submit</button>
+                    <button className="btn btn-success" onClick={this.submitClicked}>Submit</button>
                 </div>
            </div>
         </div>

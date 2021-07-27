@@ -65,7 +65,7 @@ class ProfileComponent extends Component {
                         <br />
                         <input type="password-confirm" name="password-confirm" value={this.state.passwordConfirm} onChange={this.handleChange}/>
                     </div>
-                    <button className="btn btn" onClick={this.submitClicked}>Submit</button>
+                    <button className="btn btn-success" onClick={this.submitClicked}>Submit</button>
                 </div>
            </div>
         )
