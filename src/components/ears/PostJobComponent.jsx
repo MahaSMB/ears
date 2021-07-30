@@ -45,9 +45,8 @@ class PostJobComponent extends Component {
                         <br />
                         <select id = "dropdown" ref = {(input)=> this.menu = input}>
                            
-                            <option value="Math_Instructor">Math Instructor</option>
-                            <option value="Science_Instructor">Science Instructor</option>
-                            <option value="Computer_Instructor">Computer Instructor</option>
+                            <option value="Math_Instructor">Mathematics Instructor</option>
+                            <option value="Computer_Instructor">Computer Science Instructor</option>
                      
                         </select>
                       
@@ -56,9 +55,8 @@ class PostJobComponent extends Component {
                         <label>Select Department:</label>
                         <select id = "dropdown" ref = {(input)=> this.menu = input}>
                            
-                           <option value="MATH">Math</option>
-                           <option value="SCIENCE">SCIENCE</option>
-                           <option value="COMPUTER_SCIENCE">COMPUTER SCIENCE</option>
+                           <option value="MATH">Mathematics</option>
+                           <option value="COMPUTER_SCIENCE">Computer Science</option>
                     
                        </select>
                     </div>
