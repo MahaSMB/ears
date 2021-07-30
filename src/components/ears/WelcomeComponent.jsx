@@ -34,6 +34,16 @@ class WelcomeComponent extends Component {
     handleClick = () => {
         this.props.history.push("/addJob");
     }
+
+    deleteJob = (id) => {
+        alert("Delete" + id );
+        var jobId = parseInt({id})
+        axios.post('http://localhost:8080/api/app/delete/job/'+ id)
+    }
+
+    editJob = (id) => {
+        this.props.history.push("/addJob");
+    }
    
     content = 
     this.state.jobs.map((job) => 
@@ -100,6 +110,20 @@ class WelcomeComponent extends Component {
                     className="bg-blue-500 text-white p-2 flex justify-center w-full">
                     View 
                 </Link>
+                    
+                    <div  style={{ flex: 1,
+                        flexDirection: 'row',
+                        justifyContent: 'space-between'}}>
+                        <div className="sm-6">
+                        
+                            <Button onClick={() => this.deleteJob(job.id)} variant="danger">Delete</Button>
+                        </div>
+
+                        <div className="sm-6">
+                        
+                        <Button onClick={() => this.editJob(job.id)} variant="warning"> &nbsp; Edit  &nbsp;</Button>
+                        </div>
+                     </div>
             </div>
         </div>
   )}
