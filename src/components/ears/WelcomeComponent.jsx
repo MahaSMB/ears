@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import { Button, Card, Container, Row, col } from "react-bootstrap";
 import axios from 'axios'
 import ApplicantCard from './ApplicantCard'
@@ -11,11 +11,15 @@ const api = axios.create({
 
 let content = null
 
+
+
 class WelcomeComponent extends Component {
 
     state = {
         jobs: []
     }
+
+
 
 
     constructor(props) {
@@ -25,6 +29,10 @@ class WelcomeComponent extends Component {
                 console.log(res.data)
                 this.setState({ jobs : res.data})
         })
+    }
+
+    handleClick = () => {
+        this.props.history.push("/addJob");
     }
    
     content = 
@@ -37,20 +45,17 @@ class WelcomeComponent extends Component {
  
     render() {
         return <div>
-            <h1>Welcome!</h1>
-            <div className="container">
-                Welcome {this.props.match.params.name}. You can manage the list of applicants <Link to="/listApplicants">here</Link>.
-            </div>
-            <div className="container">
-                Click here to get a customized welcome message.
-                <button onClick={this.retrieveWelcomeMessage}
-                    className="btn btn-success">Get Welcome Message</button>                    
-            </div>
+            <h1>Welcome to EARS!</h1>
+    
+          
+                <br/>
+      
 
-            <div className="container">
-                Add a Job
-                <button onClick={this.retrieveWelcomeMessage}
-                    className="btn btn-success">Add a new job</button>                    
+            <div className="d-grid gap-2">
+                <Button onClick={this.handleClick} variant="primary" size="lg">
+                Add a new job
+                </Button>
+             
             </div>
 
             <div className="mt-4">
