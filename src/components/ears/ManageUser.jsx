@@ -4,7 +4,7 @@ class ManageUser extends Component {
     render() {
        
         return (
-        <>
+        <div>
             <h1 className="font-bold text-2xl mb-3">
                 Manage Users                
             </h1>
@@ -53,7 +53,7 @@ class ManageUser extends Component {
                 </div>
             </div>
             </div>        
-        </>
+        </div>
         )
     }
 

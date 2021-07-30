@@ -16,8 +16,9 @@ class HeaderComponent extends Component {
         // const closeMobileMenu = () => setClick(false)
         //console.log(isUserLoggedIn);
         return (
-        <>
-            <header>
+        <div>
+          
+          <header>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <div><a href="https://algomau.ca/" className="navbar-brand">Algoma U</a></div>                             
                     {isUserLoggedIn &&  <Dropdown/>}
@@ -40,9 +41,9 @@ class HeaderComponent extends Component {
                 </nav>
             </header>
             <div>
-                 <hr />
+              
             </div>
-        </>
+        </div>
         )
     }
 }

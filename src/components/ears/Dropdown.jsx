@@ -6,7 +6,7 @@ import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
 
 function Dropdown() {
   return (
-    <>
+    <div>
     <Nav>
         <NavDropdown title="Home">
             <NavDropdown.Item href="/welcome/:name">Home</NavDropdown.Item>
@@ -16,7 +16,7 @@ function Dropdown() {
         </NavDropdown>
     </Nav>
        
-   </>
+   </div>
   )
 }
 
